@@ -85,4 +85,5 @@ const gems = [{
 
 export class StoreComponent {
  store = gems;
+
 }
