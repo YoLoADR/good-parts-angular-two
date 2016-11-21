@@ -1,86 +1,30 @@
 import { Component } from '@angular/core';
-const gems = [{
-    name: 'Azurite',
-    description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
-    shine: 8,
-    price: 110.50,
-    rarity: 7,
-    color: '#CCC',
-    faces: 14,
-    images: [
-      "http://lorempixel.com/400/200/",
-      "http://lorempixel.com/400/200/sports/",
-      "http://lorempixel.com/400/200/sports/1/"
-    ],
-    reviews: [{
-      stars: 5,
-      body: "I love this gem!",
-      author: "joe@example.org",
-      createdOn: 1397490980837
-    }, {
-      stars: 1,
-      body: "This gem sucks.",
-      author: "tim@example.org",
-      createdOn: 1397490980837
-    }]
-  }, {
-    name: 'Bloodstone',
-    description: "Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
-    shine: 9,
-    price: 22.90,
-    rarity: 6,
-    color: '#EEE',
-    faces: 12,
-    images: [
-      "http://lorempixel.com/400/200/",
-      "http://lorempixel.com/400/200/sports/",
-      "http://lorempixel.com/400/200/sports/1/"
-    ],
-    reviews: [{
-      stars: 3,
-      body: "I think this gem was just OK, could honestly use more shine, IMO.",
-      author: "JimmyDean@example.org",
-      createdOn: 1397490980837
-    }, {
-      stars: 4,
-      body: "Any gem with 12 faces is for me!",
-      author: "gemsRock@example.org",
-      createdOn: 1397490980837
-    }]
-  }, {
-    name: 'Zircon',
-    description: "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
-    shine: 70,
-    price: 1100,
-    rarity: 2,
-    color: '#000',
-    faces: 6,
-    images: [
-      "http://lorempixel.com/400/200/",
-      "http://lorempixel.com/400/200/sports/",
-      "http://lorempixel.com/400/200/sports/1/"
-    ],
-    reviews: [{
-      stars: 1,
-      body: "This gem is WAY too expensive for its rarity value.",
-      author: "turtleguyy@example.org",
-      createdOn: 1397490980837
-    }, {
-      stars: 1,
-      body: "BBW: High Shine != High Quality.",
-      author: "LouisW407@example.org",
-      createdOn: 1397490980837
-    }, {
-      stars: 1,
-      body: "Don't waste your rubles!",
-      author: "nat@example.org",
-      createdOn: 1397490980837
-    }]
-}];
+import { Panel } from './panel';
+const gems =[
+  {
+    id: 1,
+    name: "PRISMATIC",
+    description: "Nostrud dolor dolore elit dolor exercitation tempor. Sint ea amet fugiat pariatur ipsum irure adipisicing commodo. Officia quis nostrud eu cupidatat dolor minim deserunt dolore adipisicing amet tempor velit laboris. Quis nostrud ullamco aliqua quis esse consequat culpa exercitation consequat. Sint ut occaecat consequat dolor. Consectetur do reprehenderit ea commodo qui consectetur ut mollit.",
+    picture: "http://lorempixel.com/400/200/"
+  },
+  {
+    id: 2,
+    name: "MOLTONIC",
+    description: "Officia velit in excepteur minim sunt cupidatat. Culpa amet commodo laboris do id adipisicing mollit ad veniam duis ut quis enim. Incididunt tempor nisi non laboris minim nulla eiusmod et esse incididunt adipisicing id deserunt magna. Dolor nisi veniam eiusmod incididunt aute eiusmod pariatur culpa. Enim id exercitation ea veniam. Fugiat consectetur qui aliqua occaecat laboris exercitation proident culpa commodo proident.",
+    picture: "http://lorempixel.com/400/200/"
+  },
+  {
+    id: 3,
+    name: "VENOFLEX",
+    description: "Esse amet consectetur aliqua voluptate officia. Aliqua adipisicing amet Lorem qui Lorem fugiat officia nulla laboris officia ad. Voluptate tempor dolor ex officia. Nisi dolore laborum duis adipisicing dolor officia nostrud enim ut sunt ex ut. Veniam ex adipisicing duis amet dolor duis fugiat et qui ex ea est adipisicing anim. Eiusmod sit labore nisi mollit.",
+    picture: "http://lorempixel.com/400/200/"
+  }
+];
 @Component({
   moduleId: module.id,
   selector: 'store',
-  templateUrl: 'store.component.html'
+  templateUrl: 'store.component.html',
+  directives: [Panel]
 })
 
 export class StoreComponent {

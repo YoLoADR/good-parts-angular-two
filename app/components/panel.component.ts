@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StoreComponent } from './store.component';
 @Component({
   moduleId: module.id,
@@ -6,11 +6,16 @@ import { StoreComponent } from './store.component';
   templateUrl: 'panel.component.html'
 })
 
-export class PanelComponent {
-  ngOnInit() {
-    this.tab = 1;
-  }
-  selectTab(setTab){
-    this.tab = setTab;
-  }
+export class PanelComponent implements OnInit{
+  tab = 1;
+  ngOnInit(){
+    this.tab = 1
+  };
+  selectTab(setTab: any) {
+    this.tab = setTab
+  };
+  isSelected(checkTab: any) {
+    return this.tab === checkTab
+  };
+
 }

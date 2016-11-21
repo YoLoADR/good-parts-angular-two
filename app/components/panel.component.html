@@ -1,12 +1,12 @@
 <section>
   <ul class="nav nav-pills">
-    <li [ngClass]="{'active':tab === 1}"> <a (click)="selectTab(1)">Description</a> </li>
-    <li [ngClass]="{'active':tab === 2}"> <a (click)="selectTab(2)">Specifications</a> </li>
-    <li [ngClass]="{'active':tab === 3}"> <a (click)="selectTab(3)">Reviews</a> </li>
+    <li [ngClass]="{'active':isSelected(1)}"> <a (click)="selectTab(1)">Description</a> </li>
+    <li [ngClass]="{'active':isSelected(2)}"> <a (click)="selectTab(2)">Specifications</a> </li>
+    <li [ngClass]="{'active':isSelected(3)}"> <a (click)="selectTab(3)">Reviews</a> </li>
   </ul>
   <div class="panel" *ngIf="tab == 1">
     <h4>Description</h4>
-    <blockquote >product.description (en attente)</blockquote>
+    <blockquote >test</blockquote>
   </div>
   <div class="panel" *ngIf="tab == 2">
     <h4>Spécifications</h4>

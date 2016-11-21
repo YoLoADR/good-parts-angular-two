@@ -11,13 +11,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var PanelComponent = (function () {
     function PanelComponent() {
+        this.tab = 1;
     }
     PanelComponent.prototype.ngOnInit = function () {
         this.tab = 1;
     };
+    ;
     PanelComponent.prototype.selectTab = function (setTab) {
         this.tab = setTab;
     };
+    ;
+    PanelComponent.prototype.isSelected = function (checkTab) {
+        return this.tab === checkTab;
+    };
+    ;
     PanelComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
