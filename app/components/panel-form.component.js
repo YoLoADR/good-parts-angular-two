@@ -14,19 +14,19 @@ var PanelFormComponent = (function () {
     function PanelFormComponent() {
         this.tabOfReviews = [];
         this.rates = [1, 2, 3, 4, 5];
-        //données fictives
-        this.model = new panel_1.Panel(1, "Génial j'adore Yoh", "yohann.atticot@gmail.com");
         this.submitted = false;
+        this.model = { rate: 1, reviews: "Hello", author: "Coucou" };
+        console.log(this.model);
     }
     PanelFormComponent.prototype.onSubmit = function () { this.submitted = true; };
-    PanelFormComponent.prototype.newPanel = function () {
-        this.model = new panel_1.Panel(this.model.rate, this.model.reviews, this.model.author);
-        this.tabOfReviews.push(this.model);
-        console.log("review", this.review);
+    PanelFormComponent.prototype.newPanel = function (data) {
+        var new_review = new panel_1.Panel(data.rate, data.reviews, data.author);
+        this.tabOfReviews.push(new_review);
+        console.log("new_review", new_review);
         console.log("tabOfReviews", this.tabOfReviews);
     };
     Object.defineProperty(PanelFormComponent.prototype, "diagnostic", {
-        /*  if(!review){model = new Panel(review.stars, review.body, review.author)}*/
+        /*  if(!review){model = new Panel(review.stars, review.body, review.author)}  // console.log("review", this.review);*/
         //TODO: Supprime ça lorsque nous avons terminé
         get: function () { return JSON.stringify(this.model); },
         enumerable: true,

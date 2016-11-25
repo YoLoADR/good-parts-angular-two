@@ -6,7 +6,7 @@ Nous mettons le nom à ngModel parce que la propriété exportAs de la directive
 
 <h1>Reviews</h1>
 <h2>Submit a Reviews</h2>
-//TODO 2: Supprime ça lorsque nous avons terminé tabOfReviews :
+//TODO 2: Supprime ça lorsque nous avons terminé tabOfReviews : {{review}}
 <form (ngSubmit)="onSubmit()" #panelForm="ngForm">
   <div class="form-group">
     <label for="rate">Rate th Product</label>
@@ -29,7 +29,7 @@ Nous mettons le nom à ngModel parce que la propriété exportAs de la directive
     <div [hidden]="author.valid || author.pristine" class="alert alert-danger">Author is required
     </div>
   </div>
-  <button type="submit" class="btn btn-default" (click)="newPanel(model); panelForm.reset()" [disabled]="!panelForm.form.valid">New Review</button>
+  <button type="button" class="btn btn-default" (click)="newPanel(model); panelForm.reset()" [disabled]="!panelForm.form.valid">New Review</button>
 </form>
 
 <!--Source : https://angular.io/docs/ts/latest/guide/forms.html -->

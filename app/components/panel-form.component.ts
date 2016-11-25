@@ -8,21 +8,28 @@ import { Panel }    from './panel';
 })
 
 export class PanelFormComponent {
-  tabOfReviews = [];
-  rates = [1,2,3,4,5];
-  //données fictives
-  model = new Panel(1, "Génial j'adore Yoh", "yohann.atticot@gmail.com");
-  submitted = false;
   @Input('review') review: string;
+
+  model;
+  tabOfReviews : any = [];
+  rates = [1,2,3,4,5];
+  submitted = false;
+
+  constructor(){
+    this.model = {rate: 1, reviews:"Hello", author:"Coucou"};
+    console.log(this.model);
+  }
+
   onSubmit(){this.submitted = true;}
-  newPanel() {
-    this.model = new Panel(this.model.rate, this.model.reviews, this.model.author);
-    this.tabOfReviews.push(this.model);
-    console.log("review", this.review);
+
+  newPanel(data: any) {
+    let new_review = new Panel(data.rate, data.reviews, data.author);
+    this.tabOfReviews.push(new_review);
+    console.log("new_review", new_review);
     console.log("tabOfReviews", this.tabOfReviews);
   }
 
-/*  if(!review){model = new Panel(review.stars, review.body, review.author)}*/
+/*  if(!review){model = new Panel(review.stars, review.body, review.author)}  // console.log("review", this.review);*/
 
   //TODO: Supprime ça lorsque nous avons terminé
   get diagnostic(){return JSON.stringify(this.model);}
