@@ -6,14 +6,19 @@
   </ul>
   <div class="panel" *ngIf="tab == 1">
     <h4>Description</h4>
-    <blockquote >test</blockquote>
+    <blockquote>{{currentProduct.description}}</blockquote>
   </div>
   <div class="panel" *ngIf="tab == 2">
     <h4>Spécifications</h4>
-    <blockquote >None yet</blockquote>
+    <blockquote >{{currentProduct.about}}</blockquote>
   </div>
   <div class="panel" *ngIf="tab == 3">
     <h4>Reviews</h4>
-    <blockquote>None yet</blockquote>
+    <blockquote *ngFor="let review of currentProduct.reviews" (click)="selectReviews(review)">
+      <b>{{review.stars}} Stars </b>
+      {{review.body}}
+      <cite>{{review.author}}</cite>
+    </blockquote> //TODO 1: Supprime ça lorsque nous avons terminé currenReview :
+    <panel-form [review]="review"></panel-form>
   </div>
 </section>

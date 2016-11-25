@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { StoreComponent } from './store.component';
 @Component({
   moduleId: module.id,
@@ -8,6 +8,7 @@ import { StoreComponent } from './store.component';
 
 export class PanelComponent implements OnInit{
   tab = 1;
+  review = {};
   ngOnInit(){
     this.tab = 1
   };
@@ -17,5 +18,12 @@ export class PanelComponent implements OnInit{
   isSelected(checkTab: any) {
     return this.tab === checkTab
   };
+
+  selectReviews(review: any){
+    this.review = review;
+    console.log("review", review);
+  }
+  @Input('master') masterName: string;
+  @Input('product') currentProduct: string;
 
 }

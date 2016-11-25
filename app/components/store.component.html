@@ -6,7 +6,7 @@
     <li class="list-group-item" *ngFor="let product of store">
       <h3>{{product.name}} <em class="pull-rigth">{{product.price | currency:'USD':true}}</em></h3>
       <img [src]="product.picture">
-      <panel></panel>
+      <panel [master]="master" [product]="product"></panel>
     </li>
   </ul>
 </div>

@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var PanelComponent = (function () {
     function PanelComponent() {
         this.tab = 1;
+        this.review = {};
     }
     PanelComponent.prototype.ngOnInit = function () {
         this.tab = 1;
@@ -25,6 +26,18 @@ var PanelComponent = (function () {
         return this.tab === checkTab;
     };
     ;
+    PanelComponent.prototype.selectReviews = function (review) {
+        this.review = review;
+        console.log("review", review);
+    };
+    __decorate([
+        core_1.Input('master'), 
+        __metadata('design:type', String)
+    ], PanelComponent.prototype, "masterName", void 0);
+    __decorate([
+        core_1.Input('product'), 
+        __metadata('design:type', String)
+    ], PanelComponent.prototype, "currentProduct", void 0);
     PanelComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
