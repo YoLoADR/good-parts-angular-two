@@ -1,38 +1,38 @@
 export class Panel {
 
-  private rate: number;
-  private reviews: string;
+  private stars: number;
+  private body: string;
   private author: string;
 
   constructor(
-    rate: number,
-    reviews: string,
+    stars: number,
+    body: string,
     author: string
     /*(?) facultatif et le constructeur nous permet de l'omettre.*/
   ){
-  this.rate = rate;
-  this.reviews = reviews;
+  this.stars = stars;
+  this.body = body;
   this.author = author;
   }
 
-  public getRate(){
-    return this.rate;
+  public getRate() : number{
+    return this.stars;
   }
 
   public getReviews(){
-    return this.reviews;
+    return this.body;
   }
 
   public getAuthor(){
     return this.author;
   }
 
-  public setRate(rate: number){
-    this.rate = rate;
+  public setRate(stars: number){
+    this.stars = stars;
   }
 
-  public setReviews(reviews: string){
-    this.reviews = reviews;
+  public setReviews(body: string){
+    this.body = body;
   }
 
   public setAuthor(author: string){

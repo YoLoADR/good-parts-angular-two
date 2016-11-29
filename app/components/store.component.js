@@ -14,7 +14,7 @@ var gems = [
         id: 1,
         name: "PRISMATIC",
         description: "Nostrud dolor dolore elit dolor exercitation tempor. Sint ea amet fugiat pariatur ipsum irure adipisicing commodo. Officia quis nostrud eu cupidatat dolor minim deserunt dolore adipisicing amet tempor velit laboris. Quis nostrud ullamco aliqua quis esse consequat culpa exercitation consequat. Sint ut occaecat consequat dolor. Consectetur do reprehenderit ea commodo qui consectetur ut mollit.",
-        picture: "http://lorempicsum.com/simpsons/627/200/3",
+        picture: "http://www.linz.at/header_vb/lebenlinz_wirtschaft_01.jpg",
         about: "Dolor nostrud pariatur laborum laborum reprehenderit fugiat nulla commodo laboris. Do labore exercitation culpa reprehenderit. Veniam aliqua duis pariatur velit fugiat ex ad.\r\n",
         address: "741 Miller Avenue, Mulino, Oklahoma, 536",
         reviews: [
@@ -34,7 +34,7 @@ var gems = [
         id: 2,
         name: "MOLTONIC",
         description: "Officia velit in excepteur minim sunt cupidatat. Culpa amet commodo laboris do id adipisicing mollit ad veniam duis ut quis enim. Incididunt tempor nisi non laboris minim nulla eiusmod et esse incididunt adipisicing id deserunt magna. Dolor nisi veniam eiusmod incididunt aute eiusmod pariatur culpa. Enim id exercitation ea veniam. Fugiat consectetur qui aliqua occaecat laboris exercitation proident culpa commodo proident.",
-        picture: "http://lorempicsum.com/futurama/627/200/3",
+        picture: "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRffHZThnWjSyWe-C9WqKXsvQ3knedVnN-7MWQiBEzeHsmiPbElrA",
         about: "Deserunt culpa excepteur commodo irure laborum commodo. Duis aute non consectetur anim mollit do voluptate adipisicing in ullamco. Sit dolor eiusmod et veniam.\r\n",
         address: "153 Fountain Avenue, Crown, Federated States Of Micronesia, 6450",
         reviews: [
@@ -54,7 +54,7 @@ var gems = [
         id: 3,
         name: "VENOFLEX",
         description: "Esse amet consectetur aliqua voluptate officia. Aliqua adipisicing amet Lorem qui Lorem fugiat officia nulla laboris officia ad. Voluptate tempor dolor ex officia. Nisi dolore laborum duis adipisicing dolor officia nostrud enim ut sunt ex ut. Veniam ex adipisicing duis amet dolor duis fugiat et qui ex ea est adipisicing anim. Eiusmod sit labore nisi mollit.",
-        picture: "http://lorempicsum.com/rio/627/200/3",
+        picture: "https://dummyimage.com/600x200/000/fff&text=Entreprise",
         about: "Id et labore nisi laborum sint ut labore qui in anim. Aliquip laboris officia cillum aute irure consequat nisi. Nisi ipsum qui quis ipsum est dolore nisi qui commodo non amet nisi. Culpa cupidatat laboris exercitation esse qui anim.\r\n",
         address: "798 Howard Alley, Wawona, New Mexico, 3863",
         reviews: [

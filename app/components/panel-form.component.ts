@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input, SimpleChanges} from '@angular/core';
 import { Panel }    from './panel';
 
 @Component({
@@ -8,24 +8,33 @@ import { Panel }    from './panel';
 })
 
 export class PanelFormComponent {
-  @Input('review') review: string;
 
-  model;
+  @Input() review: string;
+  @Input() currentReviews: any;
+
+  model : any;
   tabOfReviews : any = [];
   rates = [1,2,3,4,5];
   submitted = false;
 
   constructor(){
-    this.model = {rate: 1, reviews:"Hello", author:"Coucou"};
+    this.model = {rate: 5, reviews:"Votre commentaire", author:"Votre noms"};
     console.log(this.model);
   }
 
-  onSubmit(){this.submitted = true;}
+
+ /* ngOnChanges(changes: SimpleChanges) : void {
+    if(!this.review){
+      this.model = {rate: changes.review.currentValue.stars, reviews:changes.review.currentValue.body, author:changes.review.currentValue.author};
+    }
+  }*/
+
+  onSubmit(){
+    this.submitted = true;
+  }
 
   newPanel(data: any) {
-    let new_review = new Panel(data.rate, data.reviews, data.author);
-    this.tabOfReviews.push(new_review);
-    console.log("new_review", new_review);
+    this.currentReviews.push(new Panel(data.rate, data.reviews, data.author));
     console.log("tabOfReviews", this.tabOfReviews);
   }
 

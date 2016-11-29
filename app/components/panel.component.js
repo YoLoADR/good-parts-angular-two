@@ -16,6 +16,7 @@ var PanelComponent = (function () {
     }
     PanelComponent.prototype.ngOnInit = function () {
         this.tab = 1;
+        this.review = {};
     };
     ;
     PanelComponent.prototype.selectTab = function (setTab) {
@@ -29,6 +30,9 @@ var PanelComponent = (function () {
     PanelComponent.prototype.selectReviews = function (review) {
         this.review = review;
         console.log("review", review);
+    };
+    PanelComponent.prototype.selectCurrentReviews = function (currentReviews) {
+        console.log("currentReviews", currentReviews);
     };
     __decorate([
         core_1.Input('master'), 

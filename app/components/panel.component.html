@@ -2,7 +2,7 @@
   <ul class="nav nav-pills">
     <li [ngClass]="{'active':isSelected(1)}"> <a (click)="selectTab(1)">Description</a> </li>
     <li [ngClass]="{'active':isSelected(2)}"> <a (click)="selectTab(2)">Specifications</a> </li>
-    <li [ngClass]="{'active':isSelected(3)}"> <a (click)="selectTab(3)">Reviews</a> </li>
+    <li [ngClass]="{'active':isSelected(3)}"> <a (click)="selectTab(3); selectCurrentReviews(currentProduct.reviews)">Reviews</a> </li>
   </ul>
   <div class="panel" *ngIf="tab == 1">
     <h4>Description</h4>
@@ -18,7 +18,7 @@
       <b>{{review.stars}} Stars </b>
       {{review.body}}
       <cite>{{review.author}}</cite>
-    </blockquote> //TODO 1: Supprime ça lorsque nous avons terminé currenReview :
-    <panel-form [review]="review"></panel-form>
+    </blockquote>
+    <panel-form [review]="review" [currentReviews]="currentProduct.reviews"></panel-form>
   </div>
 </section>

@@ -15,14 +15,19 @@ var PanelFormComponent = (function () {
         this.tabOfReviews = [];
         this.rates = [1, 2, 3, 4, 5];
         this.submitted = false;
-        this.model = { rate: 1, reviews: "Hello", author: "Coucou" };
+        this.model = { rate: 5, reviews: "Votre commentaire", author: "Votre noms" };
         console.log(this.model);
     }
-    PanelFormComponent.prototype.onSubmit = function () { this.submitted = true; };
+    /* ngOnChanges(changes: SimpleChanges) : void {
+       if(!this.review){
+         this.model = {rate: changes.review.currentValue.stars, reviews:changes.review.currentValue.body, author:changes.review.currentValue.author};
+       }
+     }*/
+    PanelFormComponent.prototype.onSubmit = function () {
+        this.submitted = true;
+    };
     PanelFormComponent.prototype.newPanel = function (data) {
-        var new_review = new panel_1.Panel(data.rate, data.reviews, data.author);
-        this.tabOfReviews.push(new_review);
-        console.log("new_review", new_review);
+        this.currentReviews.push(new panel_1.Panel(data.rate, data.reviews, data.author));
         console.log("tabOfReviews", this.tabOfReviews);
     };
     Object.defineProperty(PanelFormComponent.prototype, "diagnostic", {
@@ -33,9 +38,13 @@ var PanelFormComponent = (function () {
         configurable: true
     });
     __decorate([
-        core_1.Input('review'), 
+        core_1.Input(), 
         __metadata('design:type', String)
     ], PanelFormComponent.prototype, "review", void 0);
+    __decorate([
+        core_1.Input(), 
+        __metadata('design:type', Object)
+    ], PanelFormComponent.prototype, "currentReviews", void 0);
     PanelFormComponent = __decorate([
         core_1.Component({
             moduleId: module.id,

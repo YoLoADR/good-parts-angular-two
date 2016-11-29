@@ -1,24 +1,24 @@
 "use strict";
 var Panel = (function () {
-    function Panel(rate, reviews, author) {
-        this.rate = rate;
-        this.reviews = reviews;
+    function Panel(stars, body, author) {
+        this.stars = stars;
+        this.body = body;
         this.author = author;
     }
     Panel.prototype.getRate = function () {
-        return this.rate;
+        return this.stars;
     };
     Panel.prototype.getReviews = function () {
-        return this.reviews;
+        return this.body;
     };
     Panel.prototype.getAuthor = function () {
         return this.author;
     };
-    Panel.prototype.setRate = function (rate) {
-        this.rate = rate;
+    Panel.prototype.setRate = function (stars) {
+        this.stars = stars;
     };
-    Panel.prototype.setReviews = function (reviews) {
-        this.reviews = reviews;
+    Panel.prototype.setReviews = function (body) {
+        this.body = body;
     };
     Panel.prototype.setAuthor = function (author) {
         this.author = author;
